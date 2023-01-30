@@ -73,12 +73,8 @@ const User = {
     delete : async function (loginToDelete) {
         const db = client.db(dbName);
         const allReservationsOfUser = await Reservation.getByUser(loginToDelete);
-        console.log("les reservations du user " + loginToDelete + " : " + allReservationsOfUser);
-        console.log(allReservationsOfUser.length);
         //erase all the reservation of the user before remove it
         for (let l = 0; l < allReservationsOfUser.length; l++) {
-            console.log("resa que je vais supprimer "+ allReservationsOfUser[l]);
-            console.log("son id "+allReservationsOfUser[l]._id);
            await Reservation.delete(allReservationsOfUser[l]._id);
         }
         //remove user

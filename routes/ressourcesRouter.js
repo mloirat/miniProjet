@@ -41,11 +41,8 @@ router.post('/', auth, async (req,res)=>{
     }else{
         let allRessourcesSaved = await Ressource.getRessources();
         let allRessourcesAvailable = [];
-        console.log(allRessourcesSaved);
         for(let i =0; i< allRessourcesSaved.length; i++){
             let reservationsOfRessource = await Reservation.getByRessource(allRessourcesSaved[i].name);
-            console.log("resa de la ressource : "+reservationsOfRessource);
-            console.log("taille : "+reservationsOfRessource.length);
             let ressourceAvailable = true;
             for(let j =0; j< reservationsOfRessource.length; j++){
                 let isAvailable = await Ressource.isAvailableDuringThisPeriod(reservationsOfRessource[j],dateBegin, dateEnd);

@@ -8,6 +8,7 @@ const Reservation = require(path.join(__dirname, "model/Reservation"));
 
 require('dotenv').config();
 const port = process.env.PORT;
+const uri = process.env.MONGODB_URI;
 const debug = require('debug')('http');
 const app = express();
 
@@ -57,7 +58,7 @@ app.use("/users", routerUser);
 app.use("/architectures", routerArchitecture);
 
 
-mongoose.connect("mongodb://localhost/node_bcrypt", {
+mongoose.connect(uri+"/node_bcrypt", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -122,6 +123,6 @@ app.post('/logout', function(req, res) {
 
 /*** Server Start  ***/
 app.listen(port, () => {
-    debug('HTTP sever listening on port ${port})')
+    debug('HTTP sever listening on port'+port)
 });
 

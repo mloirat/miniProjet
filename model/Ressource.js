@@ -74,8 +74,7 @@ const Ressource = {
      * - date of the ending of the period to check
      ***/
     isAvailableDuringThisPeriod : async function (reservation, dateWantedBeg, dateWantedEnd){
-        /*** Conversion of dates in order to comapre them ***/
-        console.log("im a in isAvailableDuringthisperiod");
+        /*** Conversion of dates in order to compare them ***/
         let begResa = new Date(reservation.begin);
         let endResa = new Date(reservation.end);
         let begWanted = new Date(dateWantedBeg);

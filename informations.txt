@@ -1,0 +1,18 @@
+Il existe deux types d'utilisateurs : admin ou non admin.
+Le profil admin a plus de fonctionnalités :
+- création et suprression de ressource
+- création et suppresion d'architecture
+- création et suppresion de compte utilisateur
+Voici les identifiants pour se connecter avec un profil admin :
+login : admin
+password : admin
+
+Voici les identifiants pour se connecter avec un profil non admin :
+login : utilisateur1
+password : utilisateur1
+
+Ici les logins et password sont identiques pour simplifier cependant ce n'est pas une bonne pratique à réaliser dans un vrai projet.
+
+
+
+Les modules utilisés pour cette application : bcrypt, mongoose, doteenv.

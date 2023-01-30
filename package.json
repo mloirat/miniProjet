@@ -8,6 +8,7 @@
     "devstart": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://lofty-hushed-actress.glitch.me/",
   "keywords": [],
   "author": "Marie LOIRAT",
   "license": "ISC",
