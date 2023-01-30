@@ -1,0 +1,12 @@
+extends index
+
+block content
+    div
+        if error
+            div.alert.alert-warning
+                p #{error}
+    p Veuillez saisir le login de l'utilisateur que vous voudriez retrouver.
+    form(method='POST' action='')
+        input.form-control(type='text', placeholder='Recherche...', name='userSearched', required='true')
+        hr
+        button.btn.btn-primary(type='submit') Rechercher

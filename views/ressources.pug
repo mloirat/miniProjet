@@ -1,0 +1,42 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+        p Veuillez sélectionner une plage horaire sur laquelle vous voulez vérifier la disponibilité des ressources :
+        form(method='POST' action='')
+            div.form-group
+                label(for='dateBegin') Date de début :
+                input#dateBegin.date-input(type='datetime-local' name='dateBegin' required='true' value=(undefined === item ? '' : item.name) )
+            div.form-group
+                label(for='dateEnd') Date de fin :
+                input#dateEnd.date-input(type='datetime-local' name='dateEnd' required='true' value=(undefined === item ? '' : item.name) )
+            hr
+            button.btn.btn-primary(type='submit') Rechercher
+        br
+        br
+        div.grid-container(class="content")
+            if ressourcesAvailable
+                p Les ressources disponibles sur la plage horaire selectionnée :
+                each ressource in ressourcesAvailable
+                    div.grid-item
+                        div.grid-element
+                            p.item-title Nom :
+                            a.nav-link(href='/ressources/card/' + ressource.name) #{ressource.name}
+                        div.grid-element
+                            p.item-title  Architecture :
+                            a.nav-link(href='/architectures/card/' + ressource.architecture.name) #{ressource.architecture.name}
+                        div.grid-element
+                            p.item-title  Nombre de coeurs :
+                            p #{ressource.hearts}
+                        div.grid-element
+                            p.item-title  RAM :
+                            p #{ressource.ram}
+            else
+                p Aucune ressource disponible.
+

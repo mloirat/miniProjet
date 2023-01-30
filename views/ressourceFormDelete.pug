@@ -1,0 +1,23 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    p Veuillez saisir le nom de la ressource que vous souhaiteriez supprimer.
+    form(method='POST' action='')
+        input.form-control(type='text', placeholder='Recherche...', name='ressourceSearched', required='true')
+        hr
+        button.btn.btn-danger(type='submit') Supprimer
+    br
+    div.grid-container(class="content")
+        p Les ressources enregistrées actuellement :
+        if ressources
+            each ressource in ressources
+                div.grid-item
+                    div.grid-element
+                        a.nav-link(href='/ressources/card/' + ressource.name) #{ressource.name}

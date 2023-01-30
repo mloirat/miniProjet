@@ -1,0 +1,21 @@
+extends index
+
+block content
+    div.grid-container(class="content")
+        div.grid-item
+            div.grid-element
+                p.item-title Reservation :
+                p #{reservation._id}
+            div.grid-element
+                p.item-title  Ressources :
+                p #{reservation.ressources}
+            div.grid-element
+                p.item-title  Début :
+                p #{reservation.begin}
+            div.grid-element
+                p.item-title  Fin :
+                p #{reservation.end}
+            div.grid-element
+                p.item-title  Utilisateur :
+                p #{reservation.user}
+        hr

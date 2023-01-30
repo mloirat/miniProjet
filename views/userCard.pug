@@ -1,0 +1,33 @@
+extends index
+
+block content
+    div.grid-container(class="content")
+        div
+            div.grid-element
+                p.item-title  Login :
+                p #{userOfSearch.login}
+            div.grid-element
+                p.item-title  Nom :
+                p #{userOfSearch.lastname}
+            div.grid-element
+                p.item-title  Prénom :
+                p #{userOfSearch.firstname}
+            div.grid-element
+                p.item-title  Ses réservations :
+        if reservations
+            each reservation in reservations
+                div.grid-item
+                    div.grid-element
+                        p.item-title Réservation :
+                        p #{reservation._id}
+                    div.grid-element
+                        p.item-title  Ressources :
+                        p #{reservation.ressources}
+                    div.grid-element
+                        p.item-title  Début :
+                        p #{reservation.begin}
+                    div.grid-element
+                        p.item-title  Fin :
+                        p #{reservation.end}
+        else
+            p Aucune resrvation à afficher.

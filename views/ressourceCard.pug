@@ -1,0 +1,15 @@
+extends index
+
+block content
+    div.grid-container(class="content")
+        if ressource
+            div.grid-item
+                div.grid-element
+                    p.item-title Architecture :
+                    a.nav-link(href='/architectures/card/' + ressource.architecture.name) #{ressource.architecture.name}
+                div.grid-element
+                    p.item-title Coeur :
+                    p #{ressource.hearts}
+                div.grid-element
+                    p.item-title RAM :
+                    p #{ressource.ram}

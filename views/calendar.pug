@@ -1,0 +1,353 @@
+extends index
+block content
+  if(description)
+    p #{description}
+  div.myCalendar
+    if(reservations)
+      - var allReservations = JSON.stringify(reservations);
+      input(type='hidden', id='reservationsSaved', value=allReservations)
+    else
+      p Vous avez aucune reservation.
+
+    div#header.clearfix
+      button#previousWeek.pre-button << Semaine précédente
+      button#nextWeek.next-button Semaine suivante >>;
+    table#calendar(class="table-bordered table-hover")
+      tr
+        th
+        th.daysWeek Lundi
+        th.daysWeek Mardi
+        th.daysWeek Mercredi
+        th.daysWeek Jeudi
+        th.daysWeek Vendredi
+        th.daysWeek Samedi
+        th.daysWeek Dimanche
+
+      tr.infos
+        td
+        td#Monday
+        td#Tuesday
+        td#Wednesday
+        td#Thursday
+        td#Friday
+        td#Saturday
+        td#Sunday
+      tr.hours
+        td.infos 0H
+        td#Monday-0
+        td#Tuesday-0
+        td#Wednesday-0
+        td#Thursday-0
+        td#Friday-0
+        td#Saturday-0
+        td#Sunday-0
+      tr.hours
+        td.infos 1H
+        td#Monday-1
+        td#Tuesday-1
+        td#Wednesday-1
+        td#Thursday-1
+        td#Friday-1
+        td#Saturday-1
+        td#Sunday-1
+      tr.hours
+        td.infos 2H
+        td#Monday-2
+        td#Tuesday-2
+        td#Wednesday-2
+        td#Thursday-2
+        td#Friday-2
+        td#Saturday-2
+        td#Sunday-2
+      tr.hours
+        td.infos 3H
+        td#Monday-3
+        td#Tuesday-3
+        td#Wednesday-3
+        td#Thursday-3
+        td#Friday-3
+        td#Saturday-3
+        td#Sunday-3
+      tr.hours
+        td.infos 4H
+        td#Monday-4
+        td#Tuesday-4
+        td#Wednesday-4
+        td#Thursday-4
+        td#Friday-4
+        td#Saturday-4
+        td#Sunday-4
+      tr.hours
+        td.infos 5H
+        td#Monday-5
+        td#Tuesday-5
+        td#Wednesday-5
+        td#Thursday-5
+        td#Friday-5
+        td#Saturday-5
+        td#Sunday-5
+      tr.hours
+        td.infos 6H
+        td#Monday-6
+        td#Tuesday-6
+        td#Wednesday-6
+        td#Thursday-6
+        td#Friday-6
+        td#Saturday-6
+        td#Sunday-6
+      tr.hours
+        td.infos 7H
+        td#Monday-7
+        td#Tuesday-7
+        td#Wednesday-7
+        td#Thursday-7
+        td#Friday-7
+        td#Saturday-7
+        td#Sunday-7
+      tr.hours
+        td.infos 8H
+        td#Monday-8
+        td#Tuesday-8
+        td#Wednesday-8
+        td#Thursday-8
+        td#Friday-8
+        td#Saturday-8
+        td#Sunday-8
+      tr.hours
+        td.infos 9H
+        td#Monday-9
+        td#Tuesday-9
+        td#Wednesday-9
+        td#Thursday-9
+        td#Friday-9
+        td#Saturday-9
+        td#Sunday-9
+      tr.hours
+        td.infos 10H
+        td#Monday-10
+        td#Tuesday-10
+        td#Wednesday-10
+        td#Thursday-10
+        td#Friday-10
+        td#Saturday-10
+        td#Sunday-10
+      tr.hours
+        td.infos 11H
+        td#Monday-11
+        td#Tuesday-11
+        td#Wednesday-11
+        td#Thursday-11
+        td#Friday-11
+        td#Saturday-11
+        td#Sunday-11
+      tr.hours
+        td.infos 12H
+        td#Monday-12
+        td#Tuesday-12
+        td#Wednesday-12
+        td#Thursday-12
+        td#Friday-12
+        td#Saturday-12
+        td#Sunday-12
+      tr.hours
+        td.infos 13H
+        td#Monday-13
+        td#Tuesday-13
+        td#Wednesday-13
+        td#Thursday-13
+        td#Friday-13
+        td#Saturday-13
+        td#Sunday-13
+      tr.hours
+        td.infos 14H
+        td#Monday-14
+        td#Tuesday-14
+        td#Wednesday-14
+        td#Thursday-14
+        td#Friday-14
+        td#Saturday-14
+        td#Sunday-14
+      tr.hours
+        td.infos 15H
+        td#Monday-15
+        td#Tuesday-15
+        td#Wednesday-15
+        td#Thursday-15
+        td#Friday-15
+        td#Saturday-15
+        td#Sunday-15
+      tr.hours
+        td.infos 16H
+        td#Monday-16
+        td#Tuesday-16
+        td#Wednesday-16
+        td#Thursday-16
+        td#Friday-16
+        td#Saturday-16
+        td#Sunday-16
+      tr.hours
+        td.infos 17H
+        td#Monday-17
+        td#Tuesday-17
+        td#Wednesday-17
+        td#Thursday-17
+        td#Friday-17
+        td#Saturday-17
+        td#Sunday-17
+      tr.hours
+        td.infos 18H
+        td#Monday-18
+        td#Tuesday-18
+        td#Wednesday-18
+        td#Thursday-18
+        td#Friday-18
+        td#Saturday-18
+        td#Sunday-18
+      tr.hours
+        td.infos 19H
+        td#Monday-19
+        td#Tuesday-19
+        td#Wednesday-19
+        td#Thursday-19
+        td#Friday-19
+        td#Saturday-19
+        td#Sunday-19
+      tr.hours
+        td.infos 20H
+        td#Monday-20
+        td#Tuesday-20
+        td#Wednesday-20
+        td#Thursday-20
+        td#Friday-20
+        td#Saturday-20
+        td#Sunday-20
+      tr.hours
+        td.infos 21H
+        td#Monday-21
+        td#Tuesday-21
+        td#Wednesday-21
+        td#Thursday-21
+        td#Friday-21
+        td#Saturday-21
+        td#Sunday-21
+      tr.hours
+        td.infos 22H
+        td#Monday-22
+        td#Tuesday-22
+        td#Wednesday-22
+        td#Thursday-22
+        td#Friday-22
+        td#Saturday-22
+        td#Sunday-22
+      tr.hours
+        td.infos 23H
+        td#Monday-23
+        td#Tuesday-23
+        td#Wednesday-23
+        td#Thursday-23
+        td#Friday-23
+        td#Saturday-23
+        td#Sunday-23
+
+  script.
+
+    window.onload =function (){
+      let reservationsSaved = JSON.parse(document.getElementById("reservationsSaved").value);
+
+      const currentDate = new Date();
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+      const hours = 24;
+      for (let i = 0; i < 7; i++) {
+        const day = days[i];
+        const date = new Date(currentDate);
+        date.setDate(date.getDate() + i);
+        const cell = document.getElementById(day);
+        cell.innerHTML = date.toLocaleDateString();
+      }
+      updateCalendar()
+
+      const prevWeekBtn = document.getElementById("previousWeek");
+      const nextWeekBtn = document.getElementById("nextWeek");
+
+
+      prevWeekBtn.addEventListener("click", function () {
+        currentDate.setDate(currentDate.getDate() - 7);
+        updateCalendar();
+      });
+
+      nextWeekBtn.addEventListener("click", function () {
+        currentDate.setDate(currentDate.getDate() + 7);
+        updateCalendar();
+      });
+
+      function updateCalendar() {
+        let monday = new Date(currentDate);
+        monday.setDate(currentDate.getDate() - currentDate.getDay() + 1);
+
+        let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+
+        for (let i = 0; i < 7; i++) {
+          //Put days of the weeks
+          const day = days[i];
+          const date = new Date(monday);
+          date.setDate(monday.getDate() + i);
+          const cell = document.getElementById(day);
+          cell.innerHTML = date.toLocaleDateString();
+          //Verification hour by hour
+          for (let j = 0; j < hours; j++) {
+            let countReservation = 0;
+            const cellHours = document.getElementById(`${day}-${j}`);
+            const dateBeginCell = date.setHours(j, 00, 00);
+            const dateEndCell = date.setHours(j + 1, 00, 00);
+            //check if there is one reservation during this hour (even if it's during few minutes the hour)
+            for (let i = 0; i < reservationsSaved.length; i++) {
+              let startTime = new Date(reservationsSaved[i].begin);
+              let endTime = new Date(reservationsSaved[i].end);
+              let reservationExist = isExistResa(dateBeginCell, dateEndCell, startTime, endTime);
+              if (reservationExist) {
+                //a reservation exist, we notify it in the HTMLL
+                cellHours.style.backgroundColor = "#fb4d4d";
+                const reservation = document.createElement('a');
+                reservation.setAttribute('href', "/reservations/card/"+reservationsSaved[i]._id);
+                reservation.innerHTML = reservationsSaved[i]._id;
+                cellHours.appendChild(reservation);
+                countReservation = countReservation + 1;
+              }
+            }
+            //Remove any color or element, if there is any reservation
+            if (countReservation === 0) {
+              cellHours.style.backgroundColor = "white";
+              var child = cellHours.lastElementChild;
+              while (child) {
+                cellHours.removeChild(child);
+                child = cellHours.lastElementChild;
+              }
+            }
+          }
+        }
+      }
+      /***
+       * Function to check if there is minutes of the reservation inside the period given
+       * arguments :
+       * - beginDateCell : date of the begining of the period
+       * - endDateCell : date of the ending of the period
+       * - startTime : date of the beginning of the reservation
+       * - endTime : date of the ending of the reservation
+       * ***/
+      function isExistResa(beginDateCell, endDateCell, startTime, endTime) {
+        if (beginDateCell <= startTime && startTime <= endDateCell) {
+          return true;
+        } else if (beginDateCell <= endTime && endTime <= endDateCell) {
+          return true;
+        } else if (startTime <= beginDateCell && endDateCell <= endTime) {
+          return true;
+        } else {
+          return false;
+        }
+
+      }
+
+
+    }

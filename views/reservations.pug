@@ -1,0 +1,32 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    div.grid-container(class="content")
+        if reservations
+            each reservation in reservations
+                form(method='POST' action='')
+                    div.grid-item
+                        div.grid-element
+                            p.item-title Reservation :
+                            p #{reservation._id}
+                        div.grid-element
+                            p.item-title  Ressources :
+                            p #{reservation.ressources}
+                        div.grid-element
+                            p.item-title  Début :
+                            p #{reservation.begin}
+                        div.grid-element
+                            p.item-title  Fin :
+                            p #{reservation.end}
+                        input#idResa.form-control(type='text' hidden='true' name='idResa' required='true' value=reservation._id )
+                        button.btn.btn-danger(type='submit' id=reservation._id) Annuler la réservation
+                    hr
+        else
+            p Aucune resrvation à afficher.

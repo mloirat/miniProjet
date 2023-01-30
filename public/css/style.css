@@ -1,0 +1,175 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:0;
+    align-content: baseline;
+}
+
+.grid-item{
+    margin:10px;
+    border-radius:5px;
+    border: 1px grey solid;
+    padding : 10px;
+}
+
+.grid-element{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-element p {
+    padding: 2px;
+}
+
+.item-title{
+    font-weight: bolder;
+    color: #7f7d93;
+    text-decoration: none;
+}
+
+.inline-10{
+    display: inline;
+    padding-right:10px;
+}
+
+.bg-ligth{
+    background-color: #b6dbff;
+}
+
+form{
+    margin-left: 0.5em;
+}
+
+h1{
+    margin-left: 0.1em;
+    text-shadow: 2px 2px 1px #b68585cc;
+    color : #ff2727cf;
+}
+
+.mynavbar{
+    background-color: #b6dbff;
+    box-shadow: 1px 2px 1px 1px rgb(0 0 34 / 8%);
+}
+
+#menu{
+    box-shadow: 2px 0px 0px 0px rgba(0 0 34 / 8%);
+}
+
+#menu a{
+    color: #ff2727cf;
+    font-weight: bold;
+    padding-top: 1.5em;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: bold;
+}
+
+.ressourceInput{
+    display: flex;
+    flex-direction: row;
+}
+.ressourceInput label{
+    flex: 1 1 auto;
+}
+.ressourceInput input{
+    flex: 1 1 auto;
+}
+
+
+
+.clearfix:before,  .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+#header {
+    margin-bottom: 1em;
+}
+
+.pre-button, .next-button {
+    cursor: pointer;
+    color: #ff2727cf;
+    border-radius: 88%;
+    padding: 12px;
+    border-style: hidden;
+    font-size: large;
+}
+
+.pre-button {
+    float: left;
+    margin-left: 0.5em;
+}
+
+.next-button {
+    float: right;
+    margin-right: 0.5em;
+}
+
+#myCalendar, #calendar {
+    width: 90%;
+    margin: 0 auto;
+}
+
+table {
+    border-spacing: 2px;
+    text-align: center;
+}
+.daysWeek {
+    background-color: #fb4d4d;
+    color: white;
+    text-shadow: 1px 1px 2px grey;
+    padding: 2px;
+    font-size: larger;
+}
+
+.infos {
+    background-color: #ebeef0d8;
+    color: #797b7bd8;
+    font-style: oblique;
+    padding: 4px;
+}
+
+.hours td  a{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: small;
+}
+
+.search-container{
+    background-color: greenyellow;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+.date-input {
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

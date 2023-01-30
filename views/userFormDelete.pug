@@ -1,0 +1,23 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    p Veuillez saisir le login de l'utilisateur que vous souhaiteriez supprimer.
+    form(method='POST' action='')
+        input.form-control(type='text', placeholder='Recherche...', name='userSearched', required='true')
+        hr
+        button.btn.btn-danger(type='submit') Supprimer
+    br
+    div.grid-container(class="content")
+        p Les utilisateurs enregistrés actuellement :
+        if usersSaved
+            each userSaved in usersSaved
+                div.grid-item
+                    div.grid-element
+                        a.nav-link(href='/users/card/' + userSaved.login) #{userSaved.login}

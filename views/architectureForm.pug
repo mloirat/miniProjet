@@ -1,0 +1,17 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    form(method='POST' action='')
+        div.form-group
+            label(for='name') Nom:
+            input#name.form-control(type='text' name='name' required='true' value=(undefined === item ? '' : item.name) )
+        hr
+        button.btn.btn-primary(type='submit') Valider
+

@@ -1,0 +1,24 @@
+{
+  "name": "Ordonnanceur-ISEN",
+  "version": "1.0.0",
+  "description": "Ordonnanceur de resssource informatiques.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marie LOIRAT",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.3",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  }
+}

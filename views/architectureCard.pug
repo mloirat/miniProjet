@@ -1,0 +1,11 @@
+extends index
+
+block content
+    div.grid-container(class="content")
+        if architecture
+                div.grid-item
+                    div.grid-element
+                        p.item-title Architecture :
+                        p #{architecture.name}
+        else
+            p Aucune architecture à afficher.

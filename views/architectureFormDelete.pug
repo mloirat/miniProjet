@@ -1,0 +1,23 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    p Veuillez saisir le nom de l'architecture que vous souhaiteriez supprimer.
+    form(method='POST' action='')
+        input.form-control(type='text', placeholder='Recherche...', name='architectureSearched', required='true')
+        hr
+        button.btn.btn-danger(type='submit') Supprimer
+    br
+    div.grid-container(class="content")
+        p Les architectures enregistrées actuellement :
+        if architectures
+            each architecture in architectures
+                div.grid-item
+                    div.grid-element
+                        a.nav-link(href='/architectures/card/' + architecture.name) #{architecture.name}

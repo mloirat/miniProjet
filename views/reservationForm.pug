@@ -1,0 +1,28 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    form(method='POST' action='')
+        div.form-group
+            h3 Ressource(s) voulue(s):
+            if(ressources)
+                    each ressource in ressources
+                        div(class="ressourceInput")
+                            input#ressources(type='checkbox', name="ressources", value=ressource.name)
+                            label(for='ressources') #{ressource.name}
+            hr
+        div.form-group
+            label(for='dateBegin') Date de début de réservation:
+            input#dateBegin.date-input(type='datetime-local' name='dateBegin' required='true' value=(undefined === item ? '' : item.name) )
+        div.form-group
+            label(for='dateEnd') Date de fin de réservation:
+            input#dateEnd.date-input(type='datetime-local' name='dateEnd' required='true' value=(undefined === item ? '' : item.name) )
+        hr
+        button.btn.btn-primary(type='submit') Valider
+

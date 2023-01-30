@@ -1,0 +1,33 @@
+extends index
+
+block content
+    div
+        if text
+            div.alert.alert-success
+                p #{text}
+        if error
+            div.alert.alert-warning
+                p #{error}
+    form(method='POST' action='')
+        div.form-group
+            label(for='name') Nom:
+            input#name.form-control(type='text' name='name' required='true' value=(undefined === item ? '' : item.name) )
+        div.form-group
+            label Architecture:
+            if(architectures)
+                select#architectures.form-control(name='nameArchitecture' required='true')
+                    option(value='') -- Veuillez en sélectionner une --
+                    each archi in architectures
+                        option(value=archi.name) #{archi.name}
+            else
+                p Aucune Architecture disponible.
+        hr
+        div.form-group
+            label(for='hearts') Nombre de coeur:
+            input#hearts.form-control(type='number' min=0 name='hearts' required='true' value=(undefined === item ? '' : item.name) )
+        div.form-group
+            label(for='ram') RAM:
+            input#ram.form-control(type='number' min=0 name='ram' required='true' value=(undefined === item ? '' : item.name) )
+        hr
+        button.btn.btn-primary(type='submit') Valider
+

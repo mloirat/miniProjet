@@ -1,0 +1,10 @@
+extends index
+
+block content
+    div.grid-container(class="content")
+        if architectures
+            each architecture in architectures
+                div.grid-item
+                    a.item-title(href="/architectures/card/" + architecture.name) #{architecture.name}
+        else
+            p Aucune architecture à afficher.
